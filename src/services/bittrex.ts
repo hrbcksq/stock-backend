@@ -16,11 +16,13 @@ bittrex.options({
 //         }
 //     });
 // });
-
-bittrex.websockets.subscribe(['USDT-BTC'], function (data: any, client: any) {
+let lasttime = Date.now();
+bittrex.websockets.subscribe(['BTC-USDT'], function (data: any, client: any) {
     if (data.M === 'updateSummaryState') {
-        data.A[0].Deltas.filter((x: any) => x.MarketName === 'BTC-ETH').forEach(function (data_for: any) {
-            console.log(`Market Update for ${data_for.MarketName}: ${data_for.Bid}`);
+        data.A[0].Deltas.filter((x: any) => x.MarketName === 'USDT-BTC').forEach(function (data_for: any) {
+            const now = Date.now();
+            console.log(`${ (now - lasttime) / 1000} Market Update for ${data_for.MarketName}: ${data_for.Bid}`);
+            lasttime = now;
         });
     }
 });
