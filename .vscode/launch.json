@@ -15,7 +15,7 @@
             ],
             // "preLaunchTask": "npm: build",
             "protocol": "inspector",
-            "preLaunchTask": "Watch Typescript"
+            "preLaunchTask": "tsc:watch"
         }
     ]
 }

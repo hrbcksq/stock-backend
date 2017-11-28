@@ -69,6 +69,6 @@ app.listen(app.get('port'), () => {
 });
 
 // Services
-require('./services/bittrex');
+require('./services/api/bittrex');
 
 module.exports = app;
