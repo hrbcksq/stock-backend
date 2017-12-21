@@ -9,8 +9,9 @@ import * as errorHandler from 'errorhandler';
 import * as lusca from 'lusca';
 import * as dotenv from 'dotenv';
 import * as flash from 'express-flash';
-import * as path from 'path';
 import expressValidator = require('express-validator');
+import * as path from 'path';
+// import * as moment from 'moment';
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -21,6 +22,8 @@ dotenv.config({ path: '.env.keys' });
  * Controllers (route handlers).
  */
 import indexController from './controllers/index';
+import { BittrexApiService } from './services';
+import { Market } from './models';
 
 /**
  * Create Express server.
@@ -69,6 +72,11 @@ app.listen(app.get('port'), () => {
 });
 
 // Services
-require('./services/api/bittrex');
+const apiServcie = new BittrexApiService();
+apiServcie.getStream([Market.USDT_XRP], '').subscribe((data) => {
+    data.forEach(x => x.Fills.forEach(f => console.log(`${f.OrderType}: ${f.Rate}  - ${f.Quantity}` )));
+});
+
+
 
 module.exports = app;

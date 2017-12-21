@@ -54,7 +54,7 @@
     "momentjs": "^2.0.0",
     "mongoose": "^4.6.6",
     "morgan": "^1.7.0",
-    "node-bittrex-api": "^0.7.6",
+    "node-bittrex-api": "^0.7.8",
     "nodemailer": "^2.6.4",
     "passport": "0.3.2",
     "passport-facebook": "^2.1.1",

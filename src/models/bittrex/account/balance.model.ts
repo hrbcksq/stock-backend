@@ -1,4 +1,4 @@
-export class Balance {
+export interface Balance {
     Currency: string;
     Balance: number;
     Available: number;
@@ -6,5 +6,4 @@ export class Balance {
     CryptoAddress: string;
     Requested: boolean;
     Uuid: string;
-
 }
