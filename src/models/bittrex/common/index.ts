@@ -1,2 +1,2 @@
-export * from './currency.enum';
-export * from './market.enum';
+export * from './currency';
+export * from './market';

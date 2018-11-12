@@ -1,2 +1,2 @@
-export * from './balance.model';
-export * from './deposite-address.model';
+export * from './balance';
+export * from './deposite-address';
