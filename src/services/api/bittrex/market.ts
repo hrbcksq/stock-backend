@@ -1,4 +1,4 @@
-import { Market, Entity, EndpointApiGroup } from 'models';
+import { Market, Entity, EndpointApiGroup } from '../../../models';
 import { ReturnAction } from './index';
 
 export const getMarketEndpoint = (action: ReturnAction) => {

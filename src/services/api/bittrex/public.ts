@@ -9,7 +9,7 @@ import {
   OrderBook,
   MarketHistory,
   EndpointApiGroup
-} from 'models';
+} from '../../../models';
 
 export const getPublicEndpoint = (action: ReturnAction) => {
   const get = <T>(method: string, methodParams?) => action<T>(EndpointApiGroup.Public, method, methodParams);

@@ -1,4 +1,4 @@
-import { EndpointApiGroup } from 'models';
+import { EndpointApiGroup } from '../../../models';
 import axios from 'axios';
 import { getPublicEndpoint } from './public';
 

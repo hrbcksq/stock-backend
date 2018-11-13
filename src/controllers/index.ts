@@ -1,14 +1,14 @@
 
-import { Router } from 'express';
-import * as path from 'path';
+// import { Router } from 'express';
+// import * as path from 'path';
 
-const router = Router();
+// const router = Router();
 
-router.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-    next();
-});
+// router.get('/', (req, res, next) => {
+//     res.sendFile(path.join(__dirname, '../public/index.html'));
+//     next();
+// });
 
-export default router;
+// export default router;
 
 

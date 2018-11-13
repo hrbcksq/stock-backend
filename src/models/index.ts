@@ -1,1 +1,1 @@
-export * from './bittrex/api';
+export * from './bittrex';

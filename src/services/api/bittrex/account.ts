@@ -1,4 +1,4 @@
-import { Order, Entity, Balance, Currency, DepositAddress, Market, OrderHistory, WithdrawHistory, DepositHistory, EndpointApiGroup } from 'models';
+import { Order, Entity, Balance, Currency, DepositAddress, Market, OrderHistory, WithdrawHistory, DepositHistory, EndpointApiGroup } from '../../../models';
 import { ReturnAction } from './index';
 
 export const getAccountEndpoint = (action: ReturnAction) => {
