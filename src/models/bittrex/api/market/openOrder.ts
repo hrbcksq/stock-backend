@@ -1,10 +1,11 @@
-import { OpenOrderType } from './openOrderType';
 import { Market } from 'models';
+import { OrderType } from '../static';
+
 export interface OpenOrder {
   Uuid: never;
   OrderUuid: string;
   Exchange: Market;
-  OrderType: OpenOrderType;
+  OrderType: OrderType;
   Quantity: number;
   QuantityRemaining: number;
   Limit: number;

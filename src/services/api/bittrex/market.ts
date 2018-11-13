@@ -1,11 +1,13 @@
-import { Market, Operation } from 'models';
-import { bittrex } from './abstract';
+import { Market, Entity, EndpointApiGroup } from 'models';
+import { ReturnAction } from './index';
 
-const get = bittrex.market;
+export const getMarketEndpoint = (action: ReturnAction) => {
+  const get = <T>(method: string, methodParams?) => action<T>(EndpointApiGroup.Market, method, methodParams);
 
-export const bittrexPublicEndpoints = {
-  buyLimit: (market: Market, quantity: number, rate: number) => get<Operation>('buylimit', { market, quantity, rate }),
-  sellLimit: (market: Market, quantity: number, rate: number) => get<Operation>('selllimit', { market, quantity, rate }),
-  cancel: (operation: Operation) => get<Operation>('cancel', operation),
-  getOpenOrders: (market?: Market) => get<Operation>('getopenorders', { market })
+  return {
+    buyLimit: (market: Market, quantity: number, rate: number) => get<Entity>('buylimit', { market, quantity, rate }),
+    sellLimit: (market: Market, quantity: number, rate: number) => get<Entity>('selllimit', { market, quantity, rate }),
+    cancel: (operation: Entity) => get<Entity>('cancel', operation),
+    getOpenOrders: (market?: Market) => get<Entity>('getopenorders', { market })
+  };
 };

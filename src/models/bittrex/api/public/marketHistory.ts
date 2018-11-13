@@ -1,5 +1,5 @@
-import { FillType } from '../../bittrex_old/socket/fillType';
-import { OrderType } from '../static';
+
+import { OrderType, FillType } from '../static';
 
 export interface MarketHistory {
   Id: number;
