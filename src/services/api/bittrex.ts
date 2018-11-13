@@ -6,7 +6,7 @@ import {
     Result,
     Balance,
     Candlestick,
-    Entity,
+    Operation,
     Market,
     MarketInfo,
     Currency,
@@ -108,12 +108,12 @@ export class BittrexApiService {
     }
 
     withdraw(currency: Currency, quantity: number, address: string) {
-        return new Promise<Entity>((resolve, reject) => {
+        return new Promise<Operation>((resolve, reject) => {
             bittrex.withdraw({
                 currency: currency,
                 quantity: quantity,
                 address: address
-            }, (data: Result<Entity>, error: Error) => {
+            }, (data: Result<Operation>, error: Error) => {
                 if (error || !data.success) {
                     reject(error);
                 } else {
