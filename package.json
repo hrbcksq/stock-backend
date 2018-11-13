@@ -35,8 +35,10 @@
     "testEnvironment": "node"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "async": "^2.1.2",
     "autobahn": "^17.5.2",
+    "axios": "^0.18.0",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",

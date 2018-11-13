@@ -1,6 +1,6 @@
 import { OrderType } from 'models';
 
-export interface Fill {
+export interface FillType {
     'OrderType': OrderType;
     'Rate': number;
     'Quantity': number;

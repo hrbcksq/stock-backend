@@ -90,19 +90,7 @@ export class BittrexApiService {
         });
     }
 
-    getTicker(marketName: Market) {
-        return new Promise<Tick>((resolve, reject) => {
-            bittrex.getticker({
-                market: marketName
-            }, (data: Result<Tick>, error: Error) => {
-                if (error || !data.success) {
-                    reject(error);
-                } else {
-                    resolve(data.result);
-                }
-            });
-        });
-    }
+
 
     getCandles(marketName: Market, tickInterval: Tick) {
         return new Promise<Candlestick[]>((resolve, reject) => {
